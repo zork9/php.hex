@@ -15,18 +15,7 @@
 -->
 <?php
 
-include 'include.std.php; 
-
-var $title = "Hexdump to Server";
-
-printHeader($title);
-
-print "<form>
-	hexdump : <input type="text" name="contents"><br>
-	</form><br>";
-
-var $filename = $HTTP_ROOT + '/hexdumps/' + './currentoutput.bin';###FIX multi clients
-
-printBodyAndHTMLClose();
+include 'util.php; 
+include 'file.php; 
 
 ?>
