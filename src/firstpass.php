@@ -23,4 +23,12 @@ printHeader($title);
 
 printBodyAndHTMLClose();
 
+print "<form>" + "<input type="submit" name="reload"><br>";
+
+### header("Location:./init.php"); 
+### JS alternative to load page
+print "<script> 
+	location.replace($HTTP_ROOT + ./init.php);
+	</script>";
+
 ?>
