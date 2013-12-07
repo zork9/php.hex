@@ -22,7 +22,7 @@ var $title = "Hexdump to Server";
 
 printHeader($title);
 
-print "<form>
+print "<form id="hexdump" method="post" action="firstpass.php">
 	hexdump : <input type="text" name="contents"><br>
 	</form><br>";
 

@@ -1,5 +1,4 @@
-<!-- 
- Copyright (C) Johan Ceuppens 2013
+<!-- Copyright (C) Johan Ceuppens 2013
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -14,28 +13,18 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<?php
-var $title = HexString has been dumped";
 
-printStringToFile($prevformput);
+<?php
+
+include 'include.std.php; 
+
+var $title = "Hexdump Startpage";
 
 printHeader($title);
 
-
-print "<form id="resubmit" method="post" action="init.php">" 
-	+ 
-	"<input type="submit" name="reload"><br>";
-
-/***
-<!--header("Location:./init.php");-->
-<!-- JS alternative to load page
-print "<script> 
-	location.replace($HTTP_ROOT + ./init.php);
-	</script>";
-	-->
-***/
-
-print "</form>";
+print "<form id="start" method="post" action="init.php">
+	hexdump : <input type="submit" name="go to hexdump page"><br>
+	</form><br>";
 
 printBodyAndHTMLClose();
 
