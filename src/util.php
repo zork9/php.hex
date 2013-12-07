@@ -19,24 +19,24 @@
 function printHeader($title, $css)
 {
 	print "<html><head><title>" 
-	+ $title 
-	+ "</title></head>";
+	. $title 
+	. "</title></head>";
 	### css FIX
 }
 
 function printBodyInit()
 {
-	print "<body>"	
+	print "<body>";
 }
 
 function printBodyClose()
 {
-	print "</body>"	
+	print "</body>";	
 }
 
 function printBodyAndHTMLClose()
 {
-	print "</body></html>"	
+	print "</body></html>";	
 }
 
 ?>

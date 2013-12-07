@@ -23,7 +23,7 @@ printHeader($title);
 
 
 print "<form id="resubmit" method="post" action="init.php">" 
-	+ 
+	. 
 	"<input type="submit" name="reload"><br>";
 
 /***

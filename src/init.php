@@ -26,7 +26,7 @@ print "<form id="hexdump" method="post" action="firstpass.php">
 	hexdump : <input type="text" name="contents"><br>
 	</form><br>";
 
-var $filename = $HTTP_ROOT + '/hexdumps/' + './currentoutput.bin';###FIX multi clients
+var $filename = $HTTP_ROOT . '/hexdumps/' . './currentoutput.bin';###FIX multi clients
 
 printBodyAndHTMLClose();
 
