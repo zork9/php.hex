@@ -23,7 +23,7 @@ var $title = "Hexdump to Server";
 printHeader($title);
 
 print "<form id="hexdump" method="post" action="firstpass.php">
-	hexdump : <input type="text" name="contents"><br>
+	hexdump : <input type="text" name="contents" id="hextext"><br>
 	</form><br>";
 
 var $filename = $HTTP_ROOT . '/hexdumps/' . './currentoutput.bin';###FIX multi clients

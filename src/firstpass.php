@@ -17,6 +17,7 @@
 <?php
 var $title = HexString has been dumped";
 
+var $prevformput = $hextext;
 printStringToFile($prevformput);
 
 printHeader($title);
