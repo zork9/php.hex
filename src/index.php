@@ -19,16 +19,19 @@
 
 <?php
 
-include 'include.std.php; 
+include 'include.std.php'; 
 
-var $title = "Hexdump Startpage";
+$title = "Hexdump Startpage";
 
-printHeader($title);
+printHeader("test", NULL);
 
-echo "<form id="start" method="post" action="init.php">
+printBodyInit();
+
+/***
+echo '<form id="start" method="post" action="init.php">
 	hexdump : <input type="submit" name="go to hexdump page" id="foo"><br>
-	</form><br>";
-
+	</form><br>';
+***/
 printBodyAndHTMLClose();
 
 ?>

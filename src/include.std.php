@@ -19,7 +19,7 @@
 
 <?php
 
-include 'util.php; 
-include 'file.php; 
+include 'util.php'; 
+include 'file.php'; 
 
 ?>
