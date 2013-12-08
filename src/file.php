@@ -25,12 +25,26 @@ function printHexArrayToFilename($fn, $array)
 	printHexArrayToFile($array);
 }
 
+function printHexArrayToFile2($array)
+{
+	/* BFIX fopen and endianess */
+	$fp = fopen($filename, "w+");	
+
+	for ($i = 0; $i < length($array); $i++) {
+		if (preg_match('/^[0-9A-F]/i', $array[$i]) {
+			fwrite($fp, hex2bin($array[$i]);
+		} else {
+			return -1;
+		}	
+	}
+
+	return 0;
+}
 
 function printHexArrayToFile($array)
 {
 	/* BFIX fopen and endianess */
 	$fp = fopen($filename, "w+");	
-
 
 	for ($i = 0; $i < length($array); $i++) {
 		switch ($array[$i]) {
