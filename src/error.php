@@ -1,5 +1,4 @@
-<!-- 
- Copyright (C) Johan Ceuppens 2013
+<!-- Copyright (C) Johan Ceuppens 2013
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -14,29 +13,17 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
+
 <?php
 
-function printHeader($title, $css)
-{
-	echo "<html><head><title>" 
-	. $title 
-	. "</title></head>";
-	### css FIX
-}
+include 'include.std.php; 
 
-function printBodyInit()
-{
-	echo "<body>";
-}
+var $title = "Hexdump Errorpage";
 
-function printBodyClose()
-{
-	echo "</body>";	
-}
+printHeader($title);
 
-function printBodyAndHTMLClose()
-{
-	echo "</body></html>";	
-}
+echo 'You didnt't supply a hexadecimal number somewhere';
+
+printBodyAndHTMLClose();
 
 ?>

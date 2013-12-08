@@ -23,20 +23,20 @@ printStringToFile($prevformput);
 printHeader($title);
 
 
-print "<form id="resubmit" method="post" action="init.php">" 
+echo "<form id="resubmit" method="post" action="init.php">" 
 	. 
 	"<input type="submit" name="reload"><br>";
 
 /***
 <!--header("Location:./init.php");-->
 <!-- JS alternative to load page
-print "<script> 
+echo "<script> 
 	location.replace($HTTP_ROOT + ./init.php);
 	</script>";
 	-->
 ***/
 
-print "</form>";
+echo "</form>";
 
 printBodyAndHTMLClose();
 

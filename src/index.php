@@ -22,7 +22,7 @@ var $title = "Hexdump Startpage";
 
 printHeader($title);
 
-print "<form id="start" method="post" action="init.php">
+echo "<form id="start" method="post" action="init.php">
 	hexdump : <input type="submit" name="go to hexdump page" id="foo"><br>
 	</form><br>";
 
