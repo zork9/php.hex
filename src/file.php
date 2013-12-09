@@ -20,23 +20,22 @@
 
 function printHexArrayToFile2($fn, $array)
 {
-	/* BFIX fopen and endianess */
 	$fp = fopen($fn, "w+");	
 
-	for ($i = 0; $i < length($array); $i++) {
-		if (preg_match('/^[0-9A-F]/i', $array[$i]) {
-			fwrite($fp, hex2bin($array[$i]);
-		} else {
-			return -1;
-		}	
-	}
+	for ($i = 0; $i < count($array); $i++) {
+		echo $array[$i];
+	//	if (preg_match('/[0-9a-fA-F]/', $array[$i]) {
+	//		fwrite($fp, hex2bin($array[$i]);
+	//	} else {
+	//		return -1;
+	//	}
 
+	}
 	return 0;
 }
-
+/*****
 function printHexArrayToFile($fn, $array)
 {
-	/* BFIX fopen and endianess */
 	$fp = fopen($fn, "w+");	
 
 	for ($i = 0; $i < length($array); $i++) {
@@ -96,7 +95,7 @@ function printHexArrayToFile($fn, $array)
 				fwrite($fp, hex2bin("f"));
 				break;
 			default:
-				/* BFIX truncate file */	
+				//truncate file
 				header('error.php');
 				return -1;
 				break;
@@ -117,5 +116,5 @@ function printStringToFile($array)
 {
 	file_put_contents($filename, $array);
 }
-
+********/
 ?>

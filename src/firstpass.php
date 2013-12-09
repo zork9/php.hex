@@ -22,17 +22,17 @@
 include('util.php');
 include('file.php');
 
-$title = HexString has been dumped";
+$title = "HexString has been dumped";
 
-$prevformputary = explode('', $hextext);
-printHexArrayToFile2("./test", $prevformputary);
+$prevformputary = explode('', $_POST["contents"]);
+printHexArrayToFile2("test", $prevformputary);
 
 printHeader($title);
 
+echo '--->' . $_POST["contents"];
 
 echo '<form id="resubmit" method="post" action="init.php"> 
 	<input type="submit" name="reload"><br>';
-
 /***
 <!--header("Location:./init.php");-->
 <!-- JS alternative to load page
