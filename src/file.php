@@ -18,18 +18,32 @@
 ?>
 <?php
 
+function printHexArrayToFile3($fn, $str)
+{
+	$fp = fopen($fn, "w+");	
+
+	echo hex2bin($str);
+	
+	fwrite($fp, hex2bin($str));
+
+	fclose($fp);
+}
+
 function printHexArrayToFile2($fn, $array)
 {
 	$fp = fopen($fn, "w+");	
 
 	for ($i = 0; $i < count($array); $i++) {
-		if (preg_match('/^[0-9a-fA-F]/i', $array[$i])) {
-			fwrite($fp, hex2bin($array[$i]));
+		if (preg_match('/^[0-9a-fA-F]/i', $array[$i]) == 1) {
+			fwrite($fp, hex2bin($array[$i])); //FIXME
 		} else {
+			fclose($fp);
 			return -1;
 		}
 
 	}
+	fclose($fp);
+
 	return 0;
 }
 /*****

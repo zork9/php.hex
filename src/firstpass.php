@@ -22,14 +22,16 @@
 include('util.php');
 include('file.php');
 
+$filename = "test";
 $title = "HexString has been dumped";
 
 $prevformputary = str_split($_POST["contents"]);
-printHexArrayToFile2("test", $prevformputary);
+//printHexArrayToFile2($filename, $prevformputary);
+printHexArrayToFile3($filename, $S_POST["contents"]);
 
 printHeader($title);
 
-var_dump(str_split($_POST["contents"]));
+//var_dump(str_split($_POST["contents"]));
 
 echo '<form id="resubmit" method="post" action="init.php"> 
 	reload : <input type="submit" name="reload" ><br>';
