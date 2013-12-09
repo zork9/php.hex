@@ -19,6 +19,13 @@
 
 <?php
 
+function getPath()
+{
+	$path = $_SERVER['DOCUMENT_ROOT'];
+	return $path;
+
+}
+
 function printHeader($title, $css)
 {
 	echo "<html><head><title>"; 
@@ -39,7 +46,7 @@ function printBodyClose()
 
 function printBodyAndHTMLClose()
 {
-	echo "</body></html>";	
+	echo '</body></html>';	
 }
 
 ?>

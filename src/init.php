@@ -18,17 +18,17 @@
 
 <?php
 
-include 'include.std.php; 
+include('util.php'); 
 
-var $title = "Hexdump to Server";
+$title = "Hexdump to Server";
 
 printHeader($title);
 
-print "<form id="hexdump" method="post" action="firstpass.php">
-	hexdump : <input type="text" name="contents" id="hextext"><br>
-	</form><br>";
+echo '<form id="hexdump" method="post" action="firstpass.php">
+	hexdump (put in hexadecimals e.g. C) : <input type="text" name="contents" id="hextext"><br>
+	</form><br>';
 
-var $filename = $HTTP_ROOT . '/hexdumps/' . './currentoutput.bin';###FIX multi clients
+$filename = $HTTP_ROOT . '/hexdumps/' . './currentoutput.bin';###FIX multi clients
 
 printBodyAndHTMLClose();
 

@@ -17,21 +17,17 @@
 */
 ?>
 
-<?php
-
-include 'include.std.php'; 
-
-$title = "Hexdump Startpage";
-
-printHeader("test", NULL);
-
+<?
+include('util.php'); 
+printHeader("test2", "css"); 
 printBodyInit();
-
-/***
-echo '<form id="start" method="post" action="init.php">
-	hexdump : <input type="submit" name="go to hexdump page" id="foo"><br>
-	</form><br>';
-***/
-printBodyAndHTMLClose();
-
 ?>
+<h2>Hexdumper</h2>
+<?
+echo '<form id="start" method="post" action="init.php">
+	go to hexdump page: <input type="submit" name="go to hexdump page" id="foo"><br>
+	</form><br>';
+
+printBodyAndHTMLClose();
+?>
+
