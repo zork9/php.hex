@@ -25,7 +25,7 @@ $title = "Hexdump to Server";
 printHeader($title);
 
 echo '<form id="hexdump" method="post" action="firstpass.php">
-	hexdump (put in hexadecimals e.g. C) : <input type="text" name="contents" id="hextext"><br>
+	hexdump (put in hexadecimals e.g. C) : <input type="text" name="contents" id="hextext"><input type="submit" name="submit"><br>
 	</form><br>';
 
 $filename = $HTTP_ROOT . '/hexdumps/' . './currentoutput.bin';###FIX multi clients

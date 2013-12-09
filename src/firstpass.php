@@ -18,17 +18,20 @@
 ?>
 
 <?php
-var $title = HexString has been dumped";
 
-var $prevformput = $hextext;
-printStringToFile($prevformput);
+include('util.php');
+include('file.php');
+
+$title = HexString has been dumped";
+
+$prevformputary = explode('', $hextext);
+printHexArrayToFile2("./test", $prevformputary);
 
 printHeader($title);
 
 
-echo "<form id="resubmit" method="post" action="init.php">" 
-	. 
-	"<input type="submit" name="reload"><br>";
+echo '<form id="resubmit" method="post" action="init.php"> 
+	<input type="submit" name="reload"><br>';
 
 /***
 <!--header("Location:./init.php");-->
@@ -39,7 +42,7 @@ echo "<script>
 	-->
 ***/
 
-echo "</form>";
+echo '</form>';
 
 printBodyAndHTMLClose();
 

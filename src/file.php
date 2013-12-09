@@ -18,17 +18,10 @@
 ?>
 <?php
 
-function printHexArrayToFilename($fn, $array)
-{
-	$filename = $fn;
-
-	printHexArrayToFile($array);
-}
-
-function printHexArrayToFile2($array)
+function printHexArrayToFile2($fn, $array)
 {
 	/* BFIX fopen and endianess */
-	$fp = fopen($filename, "w+");	
+	$fp = fopen($fn, "w+");	
 
 	for ($i = 0; $i < length($array); $i++) {
 		if (preg_match('/^[0-9A-F]/i', $array[$i]) {
@@ -41,10 +34,10 @@ function printHexArrayToFile2($array)
 	return 0;
 }
 
-function printHexArrayToFile($array)
+function printHexArrayToFile($fn, $array)
 {
 	/* BFIX fopen and endianess */
-	$fp = fopen($filename, "w+");	
+	$fp = fopen($fn, "w+");	
 
 	for ($i = 0; $i < length($array); $i++) {
 		switch ($array[$i]) {
