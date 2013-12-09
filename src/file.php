@@ -23,12 +23,11 @@ function printHexArrayToFile2($fn, $array)
 	$fp = fopen($fn, "w+");	
 
 	for ($i = 0; $i < count($array); $i++) {
-		echo $array[$i];
-	//	if (preg_match('/[0-9a-fA-F]/', $array[$i]) {
-	//		fwrite($fp, hex2bin($array[$i]);
-	//	} else {
-	//		return -1;
-	//	}
+		if (preg_match('/^[0-9a-fA-F]/i', $array[$i])) {
+			fwrite($fp, hex2bin($array[$i]));
+		} else {
+			return -1;
+		}
 
 	}
 	return 0;

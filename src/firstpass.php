@@ -24,15 +24,15 @@ include('file.php');
 
 $title = "HexString has been dumped";
 
-$prevformputary = explode('', $_POST["contents"]);
+$prevformputary = str_split($_POST["contents"]);
 printHexArrayToFile2("test", $prevformputary);
 
 printHeader($title);
 
-echo '--->' . $_POST["contents"];
+var_dump(str_split($_POST["contents"]));
 
 echo '<form id="resubmit" method="post" action="init.php"> 
-	<input type="submit" name="reload"><br>';
+	reload : <input type="submit" name="reload" ><br>';
 /***
 <!--header("Location:./init.php");-->
 <!-- JS alternative to load page
